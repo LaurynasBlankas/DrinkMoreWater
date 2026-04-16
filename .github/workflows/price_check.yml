@@ -1,0 +1,25 @@
+name: Water Ping
+on:
+  schedule:
+    - cron: '0 6-18/3 * * *' # works every 3 hours from 6 AM to 6 PM UTC
+  workflow_dispatch:
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.14'
+          
+      - name: Install & Run
+        run: |
+          pip install requests random curl_cffi python-dotenv
+          python Water_ping.py
+
+      - name: Run water ping
+        env:
+          api_key: ${{ secrets.api_key }}
+          receiver_id: ${{ secrets.receiver_id }}
+        run: python Water_ping.py
