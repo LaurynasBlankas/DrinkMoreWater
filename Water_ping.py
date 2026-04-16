@@ -29,7 +29,13 @@ messages = ["Don't forget to hydrate! 💧",
             "Water is your friend! 💦",
             "Keep hydrated! 🥛",
             "Don't forget to drink water! 🚰",
-            "Stay hydrated and healthy! 🥤"]
+            "Stay hydrated and healthy! 🥤",
+            "U FOOL, U MUST ABSORB THE FLOWING TREASURE NOW! 💧",
+            "psst, water now 🚰",
+            "_Water_ 💧",
+            "I beg you, go get that water bottle 💧",
+            "через не можу 💧"]
+
 msg = messages[random.randint(0, len(messages)-1)]
 
 send_telegram(msg)
