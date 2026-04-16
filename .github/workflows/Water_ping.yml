@@ -15,7 +15,7 @@ jobs:
           
       - name: Install & Run
         run: |
-          pip install requests random python-dotenv
+          pip install requests python-dotenv
           python Water_ping.py
 
       - name: Run water ping
