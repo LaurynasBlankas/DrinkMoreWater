@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-scraper:
+  run-water_ping:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +15,7 @@ jobs:
           
       - name: Install & Run
         run: |
-          pip install requests random curl_cffi python-dotenv
+          pip install requests random python-dotenv
           python Water_ping.py
 
       - name: Run water ping
